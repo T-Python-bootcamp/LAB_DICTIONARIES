@@ -8,13 +8,13 @@ phones = {
     "7777777777": "Layla"
 }
 
-entry = ""#input("Type a phone number to get the owner\n")
+entry = input("Type a phone number to get the owner\n")
 
 if(not entry.isdigit()):
     print("This is invalid number")
 elif len(entry) != 10:
     print("This is invalid number")
-elif phones[entry]:
+elif entry in phones:
     print(phones[entry])
 else:
     print("Sorry, the number is not found")
