@@ -8,7 +8,7 @@ phones = {
     "7777777777": "Layla"
 }
 
-entry = input("Type a phone number to get the owner\n")
+entry = ""#input("Type a phone number to get the owner\n")
 
 if(not entry.isdigit()):
     print("This is invalid number")
@@ -20,9 +20,13 @@ else:
     print("Sorry, the number is not found")
 
 def func(nums: list):
+    lst = []
     if(type(nums) == list):
-        nums.sort(reverse=True)
-        return nums
+        for num in nums:
+            if num == 0 :
+                lst.append(num)
+            else:
+                lst.insert(0, num)
+        return lst
     else:
         print("Please enter a list of numbers")
-
